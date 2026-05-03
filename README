@@ -1,131 +1,126 @@
-📖 Project Overview
+# 🧠 BMI Predictor — ML System for Healthcare Forecasting
 
-BMI Predictor is an end-to-end machine learning system that forecasts patients’ future Body Mass Index (BMI) values using historical EMR data.
-The project leverages multiple regression and ensemble models to predict BMI changes, detect trends, and provide explainability for healthcare insights.
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Flask](https://img.shields.io/badge/Backend-Flask-black)
+![React](https://img.shields.io/badge/Frontend-React.js-61DAFB)
+![Scikit-Learn](https://img.shields.io/badge/ML-Scikit--Learn-orange)
+![XGBoost](https://img.shields.io/badge/Model-XGBoost-green)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-It integrates a Flask backend (for model inference and data handling) with a React frontend (for interactive result visualization, including prediction trends, metrics, and SHAP-based interpretability).
+---
 
-🎯 Problem Statement
+## 📖 Overview
 
-Body Mass Index (BMI) is a vital sign tracked in EMRs and is a key indicator of overall health, risk of comorbidities, and treatment effectiveness.
-Modeling its change over time enables proactive and personalized healthcare interventions.
+BMI Predictor is an end-to-end machine learning system that forecasts **future BMI values** using Electronic Medical Records (EMR) data.
 
-Objective:
-Develop a machine learning model to predict future BMI values or trends using routinely available EMR features (vitals, diagnoses, medications, procedures, etc.).
+It combines:
+- ⚙️ Flask backend (ML inference + APIs)
+- 🎨 React frontend (interactive analytics dashboard)
+- 🧠 ML + Explainability (SHAP-based insights)
 
-Deliverables:
+---
 
-A trained ML model to predict future BMI values/trends.
+## 🎯 Problem Statement
 
-A demo application showing predictions, actual labels, and explanations.
+BMI is a key clinical indicator linked to:
+- Chronic disease risk
+- Treatment effectiveness
+- Patient health trajectory
 
-A detailed report and presentation of the full ML lifecycle — from literature review to evaluation.
+This system predicts **future BMI trends** using EMR features such as vitals, diagnoses, and medications.
 
-✨ Features
-🧠 BMI Forecasting
+---
 
-Predicts future BMI values and change trends for each patient.
+## 🚀 Key Features
 
-Displays actual vs predicted BMI in the frontend.
+### 🧠 BMI Forecasting
+- Predicts future BMI values
+- Detects trend direction (increase/decrease/stable)
+- Visual comparison: Actual vs Predicted
 
-📊 Metrics & Visualization
+### 📊 Analytics Dashboard
+- Regression metrics: R², MAE, RMSE, MAPE, MSLE
+- Classification metrics: Accuracy, F1, AUROC
+- Interactive visualizations
 
-Automatic generation of:
+### 💡 Explainability
+- SHAP-based feature explanations
+- Feature importance ranking
+- Model transparency for clinical trust
 
-R² Score, MAE, MAPE, RMSE, MSE, MSLE, RMSLE
+---
 
-Classification metrics (F1, Precision, Recall, Accuracy, AUROC)
+## 🧠 ML Models
 
-Interactive graphs:
+| Type | Algorithms |
+|------|-----------|
+| Linear Models | Ridge, Lasso, Elastic Net |
+| Ensemble Models | Random Forest, Gradient Boosting, XGBoost |
 
-SHAP Explanation Curves
+---
 
-Feature Importance
+## 📈 Evaluation Metrics
 
-Confusion Matrix
+### Regression
+- R² Score
+- MAE, MSE, RMSE
+- MAPE, MSLE, RMSLE
 
-Calibration Curve
+### Classification
+- Accuracy
+- Precision / Recall
+- F1 Score
+- AUROC
 
-💾 Data Handling
+---
 
-Data extracted directly from CureMD’s EMR MongoDB dataset.
+## 🛠️ Tech Stack
 
-Preprocessing pipeline ensures consistency, removes outliers, and fixes incorrect entries in vitals and medication data.
+**Backend**
+- Flask
+- Scikit-learn
+- XGBoost
+- Pandas, NumPy
+- SHAP
 
-💡 Explainability
+**Frontend**
+- React.js
+- Tailwind CSS
+- Chart.js / Plotly
 
-SHAP (SHapley Additive exPlanations) for model interpretation.
+**Database**
+- MongoDB (CureMD EMR data)
 
-Feature importance plots for model transparency.
+---
 
-🧠 ML Models & Approach
+## 📊 Explainability
 
-The project implements and compares multiple regression and ensemble models:
+- SHAP summary plots  
+- Feature importance graphs  
+- Confusion matrix  
+- Calibration curves  
 
-Category	Algorithms Used
-Linear Models	Ridge Regression, Lasso Regression, Elastic Net
-Tree-Based	Random Forest, Gradient Boosting, XGBoost
+---
 
-Each model was tuned and evaluated using cross-validation to ensure robustness and fairness.
+## ⚡ Deployment
 
-📈 Model Evaluation & Metrics
+- RESTful Flask API
+- React-based interactive UI
+- Modular ML pipeline (production-ready structure)
 
-Regression Metrics:
+---
 
-R² Score
+## 📌 Future Work
 
-Mean Absolute Error (MAE)
+- LSTM / Transformer-based time-series modeling
+- Real-time EMR integration
+- Clinical decision support layer
+- Model drift monitoring
 
-Mean Absolute Percentage Error (MAPE)
+---
 
-Mean Squared Error (MSE)
+## 👩‍💻 Author
 
-Root Mean Squared Error (RMSE)
-
-Mean Squared Log Error (MSLE)
-
-Root Mean Squared Log Error (RMSLE)
-
-Classification Metrics (for change prediction):
-
-Accuracy
-
-Precision
-
-Recall
-
-F1 Score
-
-AUROC
-
-Visual Evaluation:
-
-SHAP Value Plots (Explainability)
-
-Confusion Matrix
-
-Calibration Curves
-
-Feature Importance Charts
-
-🛠️ Tech Stack
-
-Backend:
-
-Flask (Python)
-
-Scikit-Learn, XGBoost, NumPy, Pandas, SHAP, Matplotlib
-
-Frontend:
-
-React.js, Tailwind CSS, Chart.js / Plotly (for metrics visualization)
-
-Data Source:
-
-MongoDB EMR dataset from CureMD
-
-Deployment Ready:
-
-Modular Flask API
-
-React interface with dynamic API integration
+**Zoya Naveed**
+- GitHub: [ZoyaNaveed](https://github.com/ZoyaNaveed)
+- Medium: @_zoe101
