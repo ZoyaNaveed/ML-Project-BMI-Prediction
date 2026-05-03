@@ -1,0 +1,82 @@
+PatientID
+latest encounter date
+Age(calculated from date of birth)
+Gender
+Race
+Ethnicity
+MaritalStatus
+BMI
+Weight
+Height
+Systolic
+Diastolic
+Pulse
+Respiration
+Temperature
+WeightCategory
+alcohal_usage_type
+smoking_status
+
+GPI_GROUPS_4D = {
+    # Metabolic / Endocrine
+    "Metformin": ["2720"],         # Biguanides
+    "Sulfonylurea": ["2725"],      # e.g., glipizide
+    "OtherAntidiabetic": ["2726"], # GLP-1, SGLT2 (if codes exist in your data)
+    "Insulin_LongActing": ["5816"],
+    "Insulin_ShortActing": ["5812", "5818"],
+    "Thyroid": ["2810"],           # Levothyroxine
+
+    # Cardiovascular
+    "BetaBlocker": ["3400"],       # cardioselective
+    "Diuretic": ["3720", "3760"],  # thiazide, loop diuretics
+    "ACE_Inhibitor": ["3615"],
+    "ARB": ["3617"],
+    "CCB": ["3620"],               # calcium channel blockers
+    "Statin": ["3940", "3945", "3940", "6599"],  # HMG-CoA reductase inhibitors
+
+    # Psychiatric
+    "SSRI": ["7720"],
+    "Antipsychotic": ["5915", "5920"],  # atypical, typical
+    "MoodStabilizer": ["5910"],        # lithium, valproate
+    "Stimulant": ["6110", "6140"],     # ADHD drugs
+
+    # Weight-loss
+    "Anorexiant": ["6120"],            # phentermine
+}
+
+
+ICD_GROUPS = {
+    "Obesity": ["E66"],
+    "Diabetes": ["E11", "E08", "E10", "E13"],
+    "Dyslipidemia": ["E78"],
+    "Hypertension": ["I10", "I15", "I16"],
+    "Hypothyroid": ["E03", "E89", "E05"],
+    "PCOS": ["E28"],
+    "Depression": ["F32", "F33"],
+    "Schizophrenia": ["F20", "F29"],
+    "Bipolar": ["F30", "F31"],
+    "SleepApnea": ["G47", "RO6"]
+}
+
+LAB_KEEP = {
+    "Glucose": ["Glucose measurement", "Glucose Level","Fasting blood sugar", "Random blood glucose", "Serum glucose"],
+    "HbA1c": ["Estimated average blood glucose determination based on hemoglobin A1c", "Hemoglobin A1c", "Glycated hemoglobin"],
+    "LDL": ["Low density lipoprotein (LDL) cholesterol measurement"],
+    "HDL": ["High density lipoprotein (HDL) cholesterol measurement"],
+    "Triglycerides": ["Very low density lipoprotein (VLDL) cholesterol measurement"],
+    "TotalChol": ["Serum total cholesterol to high density lipoprotein cholesterol ratio"],
+    "TSH": ["Thyroid stimulating hormone (TSH) measurement"],
+    "Creatinine": ["Serum or plasma creatinine measurement (mass/volume)"],
+}
+
+SURGERY_GROUPS = {
+    "Gallbladder": ["gallbladder", "cholecystectomy"],
+    "Thyroid": ["thyroidectomy", "thyroid surgery"],
+    "Reproductive": ["c-section", "cesarean", "tubal ligation", "hysterectomy", "oophorectomy"],
+    "partial_gastrectomy": "Partial gastrectomy",
+    "colon_resection": "Resection of colon",
+    "nissen_fundoplication": "Nissen fundoplication",
+    "kidney_removal": "Surgical removal of kidney",
+    "cabg": "Creation of bypass of 1 or 2 coronary arteries using grafts",
+    "thoracoscopic_lobectomy": "Video-assisted thoracoscopic lobectomy"
+}
